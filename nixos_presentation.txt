@@ -1,0 +1,34 @@
+nix dåligt namn nixos bättre namn
+
+
+
+
+kolla home manager
+
+dynamiska beroenden hittas via strängmatchning
+
+stort och nytt paketrepo
+    terraform för vpn
+    slurm för bengt
+
+
+installera per maskin
+installera per användare
+installera per skal
+installera per process
+waooow
+
+uppdatera nästa boot
+
+maskinpaket och språkpaket från samma källa
+
+importera nix filer
+
+
+
+https://repology.org/repositories/statistics/newest
+
+https://blog.replit.com/nix
+
+https://www.haskellforall.com/2020/11/how-to-use-nixos-for-lightweight.html
+
