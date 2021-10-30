@@ -1,8 +1,9 @@
-with import <nixpkgs> {};
-
-# python3Packages.buildPythonPackage
-stdenv.mkDerivation
-rec {
+{ fetchFromGitHub
+, buildPythonPackage
+, swig
+, libnfs
+}:
+buildPythonPackage rec {
   pname = "python-libnfs";
   version = "0";
 
@@ -13,16 +14,9 @@ rec {
     sha256 = "0008zm05jdi2j4qgj2s55ix6f31lzj04cl5jd46gp04bxz1m8kb0";
   };
 
-  buildInputs = [ ncurses swig python3 ];
+  nativeBuildInputs = [ swig ];
+
   propagatedBuildInputs = [ libnfs ];
 
-  buildPhase = ''
-    cd  libnfs
-    make
-    cd ..
-  '';
-  installPhase = ''
-    python3 setup.py install
-  '';
-
+  pythonImportsCheck = [ "libnfs" ];
 }

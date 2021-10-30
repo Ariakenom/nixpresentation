@@ -1,9 +1,9 @@
 with import <nixpkgs> {};
 let
-    pythonWithPackages = python3.withPackages (p: with p; [
-        p.libnfs
+    pythonWithPackages = python3.withPackages (p: [
+        (p.callPackage ./python-libnfs.nix {})
     ]);
 in
 mkShell {
-    buildInputs = [ pythonWithPackages libnfs ];
+    buildInputs = [ pythonWithPackages ];
 }
