@@ -8,11 +8,9 @@ import libnfs
 
 # "--pure" means we do dont inherit the environment into the shell
 # useful for making sure you specified all dependencies.
-try:
-    import os
-    os.system('less')
-except Exception as e:
-    print(e)
+import os
+os.system('less')  # will fail!
+
 
 
 

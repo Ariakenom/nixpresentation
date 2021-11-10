@@ -28,11 +28,14 @@ buildPythonPackage {
   # We need a tool called swig to create the python ffi.
   # Native vs target refers to that we need this tool on the building side in a cross compilation 
 
+  # TODO: explain
+  # https://www.breakds.org/post/build-python-package/
+
   nativeBuildInputs = [ swig ];
 
   # TODO: explain
 
-  propagatedBuildInputs = [ libnfs ];
+  buildInputs = [ libnfs ];
 
   # as a test: check that we can import the package
 
