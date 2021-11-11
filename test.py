@@ -1,4 +1,4 @@
-#! /bin/env nix-shell
+#! /usr/bin/env nix-shell
 #! nix-shell --pure default.nix -i python3
 
 # nix shebang - Define your dependencies in the file!
